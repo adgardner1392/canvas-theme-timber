@@ -1,0 +1,26 @@
+{#header.twig#}
+<header>
+    <div class="header" data-aos="fade-up" data-aos-delay="100" data-aos-duration="400">
+        <div class="header__container container">
+            <div class="header-left">
+                <a class="header__logo-link" href="{{ site.link }}" title="{{ site.name }}">
+                    <img src="{{ theme.theme_mod('site-logo', 'default_value') }}" width="195" class="header__logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <nav class="header__navigation">
+                    <ul class="header__menu">
+                    {% for menuItem in menu.get_items %}
+                        <li class="header__item">
+                            <a class="header__link" href="{{ menuItem.link }}">{{ menuItem.title }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+                <a class="header__menu-link" href="#" data-link="#mobilemenu">
+                    {{ source('assets/dist/vectors/bars.svg') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

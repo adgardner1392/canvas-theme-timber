@@ -1,0 +1,22 @@
+// Setup
+@import "assets/src/scss/setup/font-families.scss";
+@import "assets/src/scss/setup/colours.scss";
+@import "assets/src/scss/setup/layout.scss";
+@import "assets/src/scss/setup/mixins.scss";
+@import "assets/src/scss/setup/font-sizes.scss";
+@import "assets/src/scss/setup/fonts.scss";
+
+
+// Elements
+@import "assets/src/scss/elements/content.scss";
+
+// Blocks
+@import "assets/src/scss/block/hero-image.scss";
+
+// Theme
+@import "assets/src/scss/theme/buttons.scss";
+@import "assets/src/scss/theme/header.scss";
+@import "assets/src/scss/theme/mobile-menu.scss";
+
+// Load animation styles only on the front end of the website
+@import "node_modules/aos/dist/aos";

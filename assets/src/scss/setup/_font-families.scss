@@ -1,0 +1,24 @@
+$font-families: (
+    'Gibson-Bold': 'Gibson-Bold',
+    'Gibson-Regular': 'Gibson-Regular',
+    'InputMono-Bold': 'InputMono-Bold',
+    'InputMono-Regular': 'InputMono-Regular',
+);
+
+/**
+* Load defined custom fonts from folder
+*/
+@each $key, $val in $font-families {
+    @font-face {
+        font-family: #{$key};
+        src: url('/wp-content/themes/canvas-timber/assets/dist/fonts/#{$val}.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+// Set our base fonts
+$heading-font: 'Gibson-Bold', sans-serif;
+$heading-font-regular: 'Gibson-Regular', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+$additional-font:  'InputMono-Regular', sans-serif;

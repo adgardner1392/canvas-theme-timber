@@ -1,0 +1,21 @@
+<div class="mobile-menu" id="mobilemenu">
+    <div class="mobile-menu__logo-wrap">
+        <a class="mobile-menu__logo-link" href="{{ site.link }}" title="{{ site.name }}">
+            <img src="{{ theme.theme_mod('mobile-logo', 'default_value') }}" alt="{{ site.name }} Logo" width="120" class="mobile-menu__logo mobile-menu__logo--{{ site.name }}">
+        </a>
+        <a class="mobile-menu__close" data-link="#mobilemenu" href="<?php echo site_url(); ?>">
+            <span class="mobile-menu__label">
+                {{ source('assets/dist/vectors/close.svg') }}
+            </span>
+        </a>
+    </div>
+    <div class="mobile-menu__container">
+        <ul class="mobile-menu__menu">
+        {% for menuItem in menu.get_items %}
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="{{ menuItem.link }}">{{ menuItem.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
